@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Mail, Youtube } from "lucide-react";
+import { ArrowRight, Mail, Youtube, Check } from "lucide-react";
+import { toast } from "sonner";
 
 /**
  * Masterclass Landing Page - Minimalist Professional Design
@@ -80,6 +82,19 @@ const courses = [
 ];
 
 export default function Home() {
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const handleCopyLink = (courseId: string) => {
+    const link = `https://www.digistore24.com/redir/${courseId}/DEINE-ID/`;
+    navigator.clipboard.writeText(link).then(() => {
+      setCopiedId(courseId);
+      toast.success("Link in die Zwischenablage kopiert!");
+      setTimeout(() => setCopiedId(null), 2000);
+    }).catch(() => {
+      toast.error("Fehler beim Kopieren des Links");
+    });
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -276,8 +291,16 @@ export default function Home() {
                             variant="outline"
                             size="sm"
                             className="border-primary text-primary hover:bg-primary/10 text-xs"
+                            onClick={() => handleCopyLink(course.id)}
                           >
-                            Link kopieren
+                            {copiedId === course.id ? (
+                              <>
+                                <Check className="h-3 w-3 mr-1" />
+                                Kopiert!
+                              </>
+                            ) : (
+                              "Link kopieren"
+                            )}
                           </Button>
                         </div>
                       </div>
