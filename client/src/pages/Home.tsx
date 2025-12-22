@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Mail, Instagram } from "lucide-react";
+import { ArrowRight, Mail, Youtube } from "lucide-react";
 
 /**
  * Masterclass Landing Page - Minimalist Professional Design
@@ -129,7 +129,7 @@ export default function Home() {
             <Card className="p-8 border border-border bg-card hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-2xl font-bold text-primary mb-4">Satte Provision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Ich beteilige dich mit <strong>[X]%</strong> (z. B. 50%) an jedem Netto-Verkauf, den du vermittelst.
+                Ich beteilige dich mit <strong>50 %</strong> an jedem Netto-Verkauf, den du vermittelst.
               </p>
             </Card>
 
@@ -172,7 +172,7 @@ export default function Home() {
                   Damit das System weiß, dass ein Kauf von dir kommt, brauchst du ein Konto bei unserem Zahlungsanbieter.
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Klicke hier: [Link zur Digistore-Registrierung]</li>
+                  <li>• <a href="https://www.digistore24.com/signup" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Klicke hier um dich bei Digistore24 anzumelden</a></li>
                   <li>• Wähle bei der Anmeldung die Option <strong>„Vendor & Affiliate"</strong></li>
                   <li>• Such dir einen <strong>Usernamen</strong> aus. <strong>Wichtig:</strong> Merk dir diesen Namen gut, das ist deine persönliche <strong>Affiliate-ID</strong></li>
                 </ul>
@@ -366,25 +366,27 @@ export default function Home() {
               </div>
               <p className="text-muted-foreground">
                 <a
-                  href="mailto:[Deine E-Mail-Adresse]"
+                  href="mailto:tblees@meine-geldseite.de"
                   className="text-primary hover:underline font-semibold"
                 >
-                  [Deine E-Mail-Adresse]
+                  tblees@meine-geldseite.de
                 </a>
               </p>
             </Card>
 
             <Card className="p-8 border border-border bg-card">
               <div className="flex items-center gap-4 mb-4">
-                <Instagram className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-bold text-foreground">Instagram</h3>
+                <Youtube className="h-6 w-6 text-primary" />
+                <h3 className="text-xl font-bold text-foreground">YouTube</h3>
               </div>
               <p className="text-muted-foreground">
                 <a
-                  href="https://instagram.com/[Dein Handle]"
+                  href="https://www.youtube.com/@meinegeldseite"
                   className="text-primary hover:underline font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  @[Dein Handle]
+                  @meinegeldseite
                 </a>
               </p>
             </Card>
