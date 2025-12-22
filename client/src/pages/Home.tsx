@@ -475,9 +475,11 @@ export default function Home() {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Werde jetzt Teil unseres Affiliate-Programms und verdiene mit deiner Community.
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Jetzt Affiliate werden <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <a href="https://www.digistore24.com/signup" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                Jetzt Affiliate werden <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </section>
       </main>
