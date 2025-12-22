@@ -112,6 +112,12 @@ const testimonials = [
     text: "Ich bin absolut begeistert von diesem Kurs! Die Inhalte sind hervorragend recherchiert, strukturiert, klar verständlich und perfekt aufeinander abgestimmt. Thomas Blees vermittelt komplexe Themen mit einer Leichtigkeit, die das Lernen nicht nur effizient, sondern auch angenehm macht. Dieser Kurs hat meine Erwartungen deutlich übertroffen. Ich empfehle den Kurs jedem der sich in der vielversprechenden Welt der Kryptowährungen und digitalen Assets einfinden und dabei Spaß haben möchte! :-)",
     author: "Annette",
   },
+    {
+    course: "Masterclass Optionen für Einsteiger",
+    rating: 5,
+    text: "Ich hatte zuerst einen Kurs eines anderen Mentors gekauft, bei dem ich aber sehr Schwierigkeiten hatte, in die Thematik hereinzufinden. Hier ist es mir viel besser gelungen. Der Kurs ist super aufgebaut und in einfacher Sprache erklärt. Ich fühle mich jetzt bereit, mit dem Optionshandel zu starten.",
+    author: "Sabrina K.",
+  },
 ];
 
 export default function Home() {
@@ -349,7 +355,7 @@ export default function Home() {
         <section className="py-20 md:py-28 bg-white">
           <div className="container">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
-              Das sagen unsere Kunden
+              Das sagen meine Kursteilnehmer
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
