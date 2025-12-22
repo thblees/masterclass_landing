@@ -391,17 +391,75 @@ export default function Home() {
               Dein Partner
             </h2>
 
-            <div className="flex justify-center">
-              <div className="rounded-lg overflow-hidden shadow-lg max-w-md">
-                <img
-                  src="/images/lars-pillmann.jpg"
-                  alt="Lars Pillmann, Berlin"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="bg-card p-4 text-center">
-                  <p className="text-sm text-muted-foreground font-semibold">
-                    © Lars Pillmann, Berlin
-                  </p>
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Image */}
+              <div className="flex justify-center">
+                <div className="rounded-lg overflow-hidden shadow-lg max-w-md">
+                  <img
+                    src="/images/lars-pillmann.jpg"
+                    alt="Lars Pillmann, Berlin"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="bg-card p-4 text-center">
+                    <p className="text-sm text-muted-foreground font-semibold">
+                      © Lars Pillmann, Berlin
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Biography */}
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-3">
+                    Aktuelle Position & Zertifikationen
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Abschluss KI-Pionier Akademie von Garrit Wilson ai consulting</li>
+                    <li>• (Masterclass Prompt Engineering und Masterclass KI-Automatisierung)</li>
+                    <li>• 2024 AI Workplace Proficiency Certification der Superhuman AI Academy</li>
+                    <li className="mt-3">• 2021-heute Geschäftsführer FTB Investment GmbH</li>
+                    <li>• 2019 Intensivausbildung Portfoliomanagement bei André Stagge</li>
+                    <li>• 2013 Examen Certified Financial Technician Level I</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-3">
+                    Branchenerfahrung
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Mitglied der Vereinigung Technischer Analysten Deutschlands e.V.</li>
+                    <li>• seit 2007 an der Börse aktiv – Erfahrung im Handel mit Aktien, ETFs, Optionen, Futures, Forex</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-3">
+                    Medienkarriere & Ausbildung
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• 2001-2023 Pressesprecher KPMG AG</li>
+                    <li>• 2001 Abschluss Dipl.-Betriebswirt (ebw)</li>
+                    <li>• 2000-2001 Pressesprecher bmp AG</li>
+                    <li>• 1999-2000 Redakteur "Made in Germany" (Deutsche Welle TV)</li>
+                    <li>• 1998-1999 Redakteur "Talk im Turm" (SAT1)</li>
+                    <li>• 1992-1998 freier Mitarbeiter beim SFB (Hörfunk und TV)</li>
+                    <li>• 1990-1992 Volontariat beim Sender Freies Berlin</li>
+                    <li>• 1983-1990 Studium Publizistik, Politik und Soziologie an der FU Berlin (M.A.)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-3">
+                    Weitere Aktivitäten
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Freie Mitarbeit bei Zeitungen und Hörfunk</li>
+                    <li className="mt-3"><strong>Buchveröffentlichungen:</strong></li>
+                    <li>• Glienicker Brücke (1996)</li>
+                    <li>• 90 Minuten Klassenkampf (1999)</li>
+                  </ul>
                 </div>
               </div>
             </div>
