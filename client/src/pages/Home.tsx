@@ -81,6 +81,39 @@ const courses = [
   },
 ];
 
+const testimonials = [
+  {
+    course: "Masterclass Technische Analyse",
+    rating: 5,
+    text: "Der Kurs ist strukturiert und bringt einfach, klar und kompetent auf den Punkt, was man Wissen muss. Es ist nicht mein erster Kurs in diesem Bereich, aber keiner war so nüchtern (im Guten Sinne, weil einfach und klar) und so einfach zu verstehen! Ehrlich gesagt ist der Kurs viel zu günstig, für das, was geboten wird. Wenn Du unsicher bist, ob er das Geld wert ist - kauf ihn, Du wirst nicht enttäuscht sein! Danke Thomas für Deine Arbeit!",
+    author: "Eva H.",
+  },
+  {
+    course: "Masterclass Dein Tradingplan",
+    rating: 5,
+    text: "Super Kurs, unaufgeregt, verständlich erklärt und mit vielen Details wird man an einen Tradingplan herangeführt, der in meinen Augen unerlässlich ist. Viele Punkte hätte ich nicht bedacht und bin daher sehr froh über diese Investition.",
+    author: "Geo",
+  },
+  {
+    course: "Masterclass Swingtrading",
+    rating: 5,
+    text: "Der Kurs bietet eine klare und strukturierte Einführung ins Swing Trading. Besonders gefallen haben mir die verständlichen Erklärungen, praxisnahen Beispiele und die Anwendung auf echte Charts. Ideal für Einsteiger und Fortgeschrittene, die ihr Trading auf die nächste Level bringen wollen. Absolut empfehlenswert!",
+    author: "André",
+  },
+  {
+    course: "Masterclass Aktien und ETFs",
+    rating: 5,
+    text: "Hammer Kurs. Definitiv zu empfehlen wenn man sich für investieren weiterbilden möchte. Ich als Totalanfänger lerne mehr, als ich durch Bücher oder Youtube videos je lernen konnte. Weiter so!!",
+    author: "Louis",
+  },
+  {
+    course: "Masterclass Bitcoin, NFTs und Krypto Assets",
+    rating: 5,
+    text: "Ich bin absolut begeistert von diesem Kurs! Die Inhalte sind hervorragend recherchiert, strukturiert, klar verständlich und perfekt aufeinander abgestimmt. Thomas Blees vermittelt komplexe Themen mit einer Leichtigkeit, die das Lernen nicht nur effizient, sondern auch angenehm macht. Dieser Kurs hat meine Erwartungen deutlich übertroffen. Ich empfehle den Kurs jedem der sich in der vielversprechenden Welt der Kryptowährungen und digitalen Assets einfinden und dabei Spaß haben möchte! :-)",
+    author: "Annette",
+  },
+];
+
 export default function Home() {
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
@@ -305,6 +338,34 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="container">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
+              Das sagen unsere Kunden
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="p-8 border border-border bg-gradient-to-br from-blue-50 to-white hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="text-yellow-400 text-lg">★</span>
+                    ))}
+                  </div>
+                  <p className="text-foreground mb-6 leading-relaxed italic">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="border-t border-border pt-4">
+                    <p className="font-semibold text-foreground">{testimonial.author}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.course}</p>
                   </div>
                 </Card>
               ))}
