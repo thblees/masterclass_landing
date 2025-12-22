@@ -18,63 +18,63 @@ const courses = [
     id: "656977",
     name: "Masterclass Bitcoin, NFTs und Krypto Assets",
     description: "Lerne alles über Kryptowährungen, NFTs und digitale Assets",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-bitcoin.jpg",
   },
   {
     id: "656974",
     name: "Masterclass Aktien und ETFs",
     description: "Investieren in Aktien und ETFs verstehen und umsetzen",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-aktien-etfs.jpg",
   },
   {
     id: "656973",
     name: "Masterclass Swingtrading",
     description: "Professionelle Swingtrading-Strategien für Anfänger und Fortgeschrittene",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-swingtrading.jpg",
   },
   {
     id: "656947",
     name: "Masterclass Dein Tradingplan",
     description: "Entwickle deinen persönlichen Tradingplan und Strategie",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-tradingplan.jpg",
   },
   {
     id: "656945",
     name: "Masterclass Technische Analyse",
     description: "Meistere die technische Analyse für erfolgreiche Trades",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-technische-analyse.jpg",
   },
   {
     id: "656942",
     name: "Masterclass Trading und Investieren",
     description: "Umfassendes Wissen über Trading und langfristige Investitionen",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-trading-investieren.jpg",
   },
   {
     id: "655817",
     name: "Masterclass Optionen für Fortgeschrittene",
     description: "Fortgeschrittene Optionsstrategien und Techniken",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-optionen-fortgeschrittene.jpg",
   },
   {
     id: "655552",
     name: "Masterclass Optionen für Einsteiger",
     description: "Grundlagen der Optionen für Anfänger verständlich erklärt",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-optionen-einsteiger.jpg",
   },
   {
     id: "650936",
     name: "Masterclass Ichimoku Cloud",
     description: "Lerne das Ichimoku-System für technische Analyse",
-    provision: "€XX",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-ichimoku.jpg",
   },
 ];
@@ -235,15 +235,15 @@ export default function Home() {
             Hier sind die Links, die du für deine Werbung nutzen kannst. Ersetze einfach das Wort <code className="bg-secondary px-2 py-1 rounded">DEINE-ID</code> am Ende durch deinen Digistore-Usernamen.
           </p>
 
-          <div className="space-y-12">
+          <div className="space-y-6">
             {courses.map((course) => (
               <Card
                 key={course.id}
-                className="overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300 hover:border-primary/30"
+                className="p-6 border border-border bg-card hover:shadow-md transition-all duration-300 hover:border-primary/30"
               >
-                <div className="grid md:grid-cols-2 gap-0">
-                  {/* Mockup Image */}
-                  <div className="relative h-80 md:h-auto overflow-hidden bg-secondary/20">
+                <div className="flex gap-6 items-start">
+                  {/* Mockup Image - Small */}
+                  <div className="flex-shrink-0 w-28 h-36 overflow-hidden bg-secondary/20 rounded-lg">
                     <img
                       src={course.mockup}
                       alt={course.name}
@@ -252,47 +252,44 @@ export default function Home() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-8 md:p-10 flex flex-col justify-between">
-                    <div>
-                      <div className="text-sm font-mono text-muted-foreground mb-3">
-                        Produkt-ID: {course.id}
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                        {course.name}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed mb-6">
-                        {course.description}
-                      </p>
+                  <div className="flex-1">
+                    <div className="text-sm font-mono text-muted-foreground mb-2">
+                      Produkt-ID: {course.id}
                     </div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      {course.name}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                      {course.description}
+                    </p>
 
-                    <div className="space-y-4">
+                    <div className="grid md:grid-cols-3 gap-6 items-start">
                       <div>
-                        <p className="text-sm text-muted-foreground mb-2">
+                        <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
                           Deine Provision
                         </p>
-                        <p className="text-3xl font-bold text-primary">
+                        <p className="font-bold text-primary text-sm">
                           {course.provision}
                         </p>
                       </div>
 
-                      <div>
-                        <p className="text-sm text-muted-foreground mb-2">
+                      <div className="md:col-span-2">
+                        <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">
                           Dein Werbelink
                         </p>
-                        <div className="bg-secondary/50 p-3 rounded-md border border-border">
-                          <code className="text-xs md:text-sm text-foreground break-all font-mono">
+                        <div className="bg-secondary/50 p-2 rounded-md border border-border mb-3">
+                          <code className="text-xs text-foreground break-all font-mono">
                             https://www.digistore24.com/redir/{course.id}/DEINE-ID/
                           </code>
                         </div>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-primary text-primary hover:bg-primary/10 text-xs"
+                        >
+                          Link kopieren
+                        </Button>
                       </div>
-
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full border-primary text-primary hover:bg-primary/10"
-                      >
-                        Link kopieren
-                      </Button>
                     </div>
                   </div>
                 </div>
