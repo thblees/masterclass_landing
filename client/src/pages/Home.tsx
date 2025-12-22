@@ -311,19 +311,31 @@ export default function Home() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="p-8 border border-border bg-card">
-              <h3 className="text-2xl font-bold text-foreground mb-3">Bilder & Banner</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Hier findest du Kursbilder, Logos und Story-Grafiken.
-              </p>
-            </Card>
+            <a
+              href="https://drive.google.com/drive/folders/1wp4Qp0q_yQB3UZTIEwk24ABhHwSWoQ88?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Card className="p-8 border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
+                <h3 className="text-2xl font-bold text-foreground mb-3">Bildmaterial</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Hier findest du Kursbilder, Logos und Story-Grafiken.
+                </p>
+              </Card>
+            </a>
 
-            <Card className="p-8 border border-border bg-card">
-              <h3 className="text-2xl font-bold text-foreground mb-3">Fertige Texte</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Kopiere dir meine Texte einfach heraus und passe sie kurz an.
-              </p>
-            </Card>
+            <a
+              href="https://drive.google.com/drive/folders/1aB5D82X_dYSYrj-sNQ0DGC53LlMG2sRp?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Card className="p-8 border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
+                <h3 className="text-2xl font-bold text-foreground mb-3">Fertige Texte</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Kopiere dir meine Texte einfach heraus und passe sie kurz an.
+                </p>
+              </Card>
+            </a>
           </div>
 
           <Card className="p-8 border border-border bg-card">
