@@ -81,476 +81,348 @@ const courses = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-foreground">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-border">
-        <div className="container py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-primary">Masterclass</h1>
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
+        <div className="container h-16 flex items-center justify-between">
+          <div className="text-2xl font-bold text-primary">Masterclass</div>
           <div className="text-sm text-muted-foreground">Affiliate Program</div>
         </div>
-      </nav>
+      </header>
 
-      {/* Hero Section */}
-      <section
-        className="relative py-20 md:py-32 overflow-hidden"
-        style={{
-          backgroundImage: "url('/images/hero-background.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
-        <div className="container relative z-10">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Werde mein Partner und lass uns gemeinsam wachsen!
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Hey! Ich freue mich riesig, dass du meine Kurse weiterempfehlen möchtest. Auf dieser Seite erkläre ich dir Schritt für Schritt, wie du als mein Partner (Affiliate) Geld verdienst, indem du anderen Menschen hilfst, ihre Ziele mit meinen Inhalten zu erreichen.
-            </p>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white rounded-md"
-            >
-              Jetzt starten <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
-            Warum es sich für dich lohnt
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 border border-border bg-card hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-primary mb-4">Satte Provision</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Ich beteilige dich mit <strong>50 %</strong> an jedem Netto-Verkauf, den du vermittelst.
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32 bg-gradient-to-br from-secondary/50 to-white">
+          <div className="container">
+            <div className="max-w-3xl">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                Werde mein Partner und lass uns gemeinsam wachsen!
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                Hey! Ich freue mich riesig, dass du meine Kurse weiterempfehlen möchtest. Auf dieser Seite erkläre ich dir Schritt für Schritt, wie du als mein Partner (Affiliate) Geld verdienst, indem du anderen Menschen hilfst, ihre Ziele mit meinen Inhalten zu erreichen.
               </p>
-            </Card>
-
-            <Card className="p-8 border border-border bg-card hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-primary mb-4">Passives Einkommen</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Du empfiehlst den Kurs einmal – und jedes Mal, wenn jemand über deinen Link kauft, landet Geld auf deinem Konto.
-              </p>
-            </Card>
-
-            <Card className="p-8 border border-border bg-card hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-primary mb-4">Sichere Abwicklung</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Alles läuft über <strong>Digistore24</strong>. Das bedeutet für dich: Pünktliche Auszahlung und volle Transparenz über deine Verkäufe.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
-            Schritt-für-Schritt: So wirst du mein Affiliate
-          </h2>
-
-          <div className="space-y-12">
-            <div className="flex gap-8">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white font-bold">
-                  1
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">
-                  Dein kostenloses Konto bei Digistore24
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Damit das System weiß, dass ein Kauf von dir kommt, brauchst du ein Konto bei unserem Zahlungsanbieter.
-                </p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>• <a href="https://www.digistore24.com/signup" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Klicke hier um dich bei Digistore24 anzumelden</a></li>
-                  <li>• Wähle bei der Anmeldung die Option <strong>„Vendor & Affiliate"</strong></li>
-                  <li>• Such dir einen <strong>Usernamen</strong> aus. <strong>Wichtig:</strong> Merk dir diesen Namen gut, das ist deine persönliche <strong>Affiliate-ID</strong></li>
-                </ul>
-              </div>
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                Jetzt starten <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
+          </div>
+        </section>
 
-            <div className="flex gap-8">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white font-bold">
-                  2
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">
-                  Deine Affiliate-ID finden
-                </h3>
+        {/* Benefits Section */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="container">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
+              Warum es sich für dich lohnt
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="p-8 border border-border bg-card hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-primary mb-4">Satte Provision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Sobald du eingeloggt bist, siehst du oben links in deinem Digistore-Dashboard deinen Usernamen. Das ist die ID, die wir jetzt brauchen, um deinen persönlichen Link zu bauen.
+                  Ich beteilige dich mit <strong>50 %</strong> an jedem Netto-Verkauf, den du vermittelst.
                 </p>
-              </div>
-            </div>
+              </Card>
 
-            <div className="flex gap-8">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white font-bold">
-                  3
+              <Card className="p-8 border border-border bg-card hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-primary mb-4">Passives Einkommen</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Du empfiehlst den Kurs einmal – und jedes Mal, wenn jemand über deinen Link kauft, landet Geld auf deinem Konto.
+                </p>
+              </Card>
+
+              <Card className="p-8 border border-border bg-card hover:shadow-lg transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-primary mb-4">Sichere Abwicklung</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Alles läuft über <strong>Digistore24</strong>. Das bedeutet für dich: Pünktliche Auszahlung und volle Transparenz über deine Verkäufe.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Section */}
+        <section className="py-20 md:py-28 bg-secondary/30">
+          <div className="container">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
+              Schritt-für-Schritt: So wirst du mein Affiliate
+            </h2>
+
+            <div className="space-y-12">
+              <div className="flex gap-8">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white font-bold">
+                    1
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                    Dein kostenloses Konto bei Digistore24
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Damit das System weiß, dass ein Kauf von dir kommt, brauchst du ein Konto bei unserem Zahlungsanbieter.
+                  </p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• <a href="https://www.digistore24.com/signup" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Klicke hier um dich bei Digistore24 anzumelden</a></li>
+                    <li>• Wähle bei der Anmeldung die Option <strong>„Vendor & Affiliate"</strong></li>
+                    <li>• Such dir einen <strong>Usernamen</strong> aus. <strong>Wichtig:</strong> Merk dir diesen Namen gut, das ist deine persönliche <strong>Affiliate-ID</strong></li>
+                  </ul>
                 </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">
-                  Deinen persönlichen Werbelink erstellen
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Damit du die Provision bekommst, musst du einen speziellen Link verschicken. Wenn jemand darauf klickt, wird ein „Cookie" im Browser gespeichert. Kauft die Person (auch erst Tage später), weiß das System: „Das war [Dein Name]!"
-                </p>
-                <div className="bg-card p-4 rounded-md border border-border mb-4">
-                  <p className="text-sm font-mono text-foreground mb-2">
+
+              <div className="flex gap-8">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white font-bold">
+                    2
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                    Deine Affiliate-ID finden
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Sobald du eingeloggt bist, siehst du oben links in deinem Digistore-Dashboard deinen Usernamen. Das ist die ID, die wir jetzt brauchen, um deinen persönlichen Link zu bauen.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-8">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white font-bold">
+                    3
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                    Deinen persönlichen Werbelink erstellen
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Damit du die Provision bekommst, musst du einen speziellen Link verschicken. Wenn jemand darauf klickt, wird ein „Cookie" im Browser gespeichert. Kauft die Person (auch erst Tage später), weiß das System: „Das war [Dein Name]!"
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
                     Der Link sieht so aus:
                   </p>
-                  <code className="text-sm text-primary">
-                    https://www.digistore24.com/redir/PRODUKT-ID/DEINE-ID/
-                  </code>
+                  <div className="bg-secondary/50 p-3 rounded-md border border-border mb-4">
+                    <code className="text-sm text-foreground font-mono">
+                      https://www.digistore24.com/redir/PRODUKT-ID/DEINE-ID/
+                    </code>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    <strong>Das musst du tun:</strong> Ersetze <code className="bg-secondary px-2 py-1 rounded">DEINE-ID</code> durch deinen Usernamen. Die <code className="bg-secondary px-2 py-1 rounded">PRODUKT-ID</code> findest du in der Liste unten.
+                  </p>
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  <strong>Das musst du tun:</strong> Ersetze <code className="bg-secondary px-2 py-1 rounded">DEINE-ID</code> durch deinen Usernamen. Die <code className="bg-secondary px-2 py-1 rounded">PRODUKT-ID</code> findest du in der Liste unten.
-                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Courses Section */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Meine Kurse: Such dir dein Produkt aus
-          </h2>
-          <p className="text-lg text-muted-foreground mb-16">
-            Hier sind die Links, die du für deine Werbung nutzen kannst. Ersetze einfach das Wort <code className="bg-secondary px-2 py-1 rounded">DEINE-ID</code> am Ende durch deinen Digistore-Usernamen.
-          </p>
-
-          <div className="space-y-6">
-            {courses.map((course) => (
-              <Card
-                key={course.id}
-                className="p-6 border border-border bg-card hover:shadow-md transition-all duration-300 hover:border-primary/30"
-              >
-                <div className="flex gap-6 items-start">
-                  {/* Mockup Image - Small */}
-                  <div className="flex-shrink-0 w-28 h-36 overflow-hidden bg-secondary/20 rounded-lg">
-                    <img
-                      src={course.mockup}
-                      alt={course.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <div className="text-sm font-mono text-muted-foreground mb-2">
-                      Produkt-ID: {course.id}
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">
-                      {course.name}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm mb-4">
-                      {course.description}
-                    </p>
-
-                    <div className="grid md:grid-cols-3 gap-6 items-start">
-                      <div>
-                        <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
-                          Deine Provision
-                        </p>
-                        <p className="font-bold text-primary text-sm">
-                          {course.provision}
-                        </p>
-                      </div>
-
-                      <div className="md:col-span-2">
-                        <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">
-                          Dein Werbelink
-                        </p>
-                        <div className="bg-secondary/50 p-2 rounded-md border border-border mb-3">
-                          <code className="text-xs text-foreground break-all font-mono">
-                            https://www.digistore24.com/redir/{course.id}/DEINE-ID/
-                          </code>
-                        </div>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="border-primary text-primary hover:bg-primary/10 text-xs"
-                        >
-                          Link kopieren
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tools Section */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
-            Deine Werkzeugkiste (Werbematerial)
-          </h2>
-
-          <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
-            Ich möchte es dir so einfach wie möglich machen. Du musst das Rad nicht neu erfinden! Nutze gerne meine vorbereiteten Materialien:
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <a
-              href="https://drive.google.com/drive/folders/1wp4Qp0q_yQB3UZTIEwk24ABhHwSWoQ88?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Card className="p-8 border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
-                <h3 className="text-2xl font-bold text-foreground mb-3">Bildmaterial</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Hier findest du Kursbilder, Logos und Story-Grafiken.
-                </p>
-              </Card>
-            </a>
-
-            <a
-              href="https://drive.google.com/drive/folders/1aB5D82X_dYSYrj-sNQ0DGC53LlMG2sRp?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Card className="p-8 border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
-                <h3 className="text-2xl font-bold text-foreground mb-3">Fertige Texte</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Kopiere dir meine Texte einfach heraus und passe sie kurz an.
-                </p>
-              </Card>
-            </a>
-          </div>
-
-          <Card className="p-8 border border-border bg-card">
-            <h3 className="text-2xl font-bold text-foreground mb-4">💡 Mein Profi-Tipp für dich</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Sei authentisch! Erzähle deiner Community, warum <strong>du</strong> hinter meinen Kursen stehst. Ein persönlicher Satz wie: „Ich kenne [Dein Name] und weiß, wie viel Herzblut in diesem Kurs steckt", verkauft sich 10x besser als reine Werbesprache.
+        {/* Courses Section */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="container">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Meine Kurse: Such dir dein Produkt aus
+            </h2>
+            <p className="text-lg text-muted-foreground mb-16">
+              Hier sind die Links, die du für deine Werbung nutzen kannst. Ersetze einfach das Wort <code className="bg-secondary px-2 py-1 rounded">DEINE-ID</code> am Ende durch deinen Digistore-Usernamen.
             </p>
-          </Card>
-        </div>
-      </section>
 
-      {/* Contact Section */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
-            Du hast Fragen oder brauchst Hilfe?
-          </h2>
-
-          <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
-            Wenn du irgendwo hängst, einen Test-Zugang für ein Review brauchst oder eine Idee für eine gemeinsame Aktion hast, schreib mir einfach!
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-8 border border-border bg-card">
-              <div className="flex items-center gap-4 mb-4">
-                <Mail className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-bold text-foreground">E-Mail</h3>
-              </div>
-              <p className="text-muted-foreground">
-                <a
-                  href="mailto:tblees@meine-geldseite.de"
-                  className="text-primary hover:underline font-semibold"
+            <div className="space-y-6">
+              {courses.map((course) => (
+                <Card
+                  key={course.id}
+                  className="p-6 border border-border bg-card hover:shadow-md transition-all duration-300 hover:border-primary/30"
                 >
-                  tblees@meine-geldseite.de
-                </a>
-              </p>
-            </Card>
+                  <div className="flex gap-6 items-start">
+                    {/* Mockup Image - Small */}
+                    <div className="flex-shrink-0 w-28 h-36 overflow-hidden bg-secondary/20 rounded-lg">
+                      <img
+                        src={course.mockup}
+                        alt={course.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1">
+                      <div className="text-sm font-mono text-muted-foreground mb-2">
+                        Produkt-ID: {course.id}
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground mb-2">
+                        {course.name}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                        {course.description}
+                      </p>
+
+                      <div className="grid md:grid-cols-3 gap-6 items-start">
+                        <div>
+                          <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
+                            Deine Provision
+                          </p>
+                          <p className="font-bold text-primary text-sm">
+                            {course.provision}
+                          </p>
+                        </div>
+
+                        <div className="md:col-span-2">
+                          <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">
+                            Dein Werbelink
+                          </p>
+                          <div className="bg-secondary/50 p-2 rounded-md border border-border mb-3">
+                            <code className="text-xs text-foreground break-all font-mono">
+                              https://www.digistore24.com/redir/{course.id}/DEINE-ID/
+                            </code>
+                          </div>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-primary text-primary hover:bg-primary/10 text-xs"
+                          >
+                            Link kopieren
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Tools Section */}
+        <section className="py-20 md:py-28 bg-secondary/30">
+          <div className="container">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
+              Deine Werkzeugkiste (Werbematerial)
+            </h2>
+
+            <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
+              Ich möchte es dir so einfach wie möglich machen. Du musst das Rad nicht neu erfinden! Nutze gerne meine vorbereiteten Materialien:
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <a
+                href="https://drive.google.com/drive/folders/1wp4Qp0q_yQB3UZTIEwk24ABhHwSWoQ88?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Card className="p-8 border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
+                  <h3 className="text-2xl font-bold text-foreground mb-3">Bildmaterial</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Hier findest du Kursbilder, Logos und Story-Grafiken.
+                  </p>
+                </Card>
+              </a>
+
+              <a
+                href="https://drive.google.com/drive/folders/1aB5D82X_dYSYrj-sNQ0DGC53LlMG2sRp?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Card className="p-8 border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer h-full">
+                  <h3 className="text-2xl font-bold text-foreground mb-3">Fertige Texte</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Kopiere dir meine Texte einfach heraus und passe sie kurz an.
+                  </p>
+                </Card>
+              </a>
+            </div>
 
             <Card className="p-8 border border-border bg-card">
-              <div className="flex items-center gap-4 mb-4">
-                <Youtube className="h-6 w-6 text-primary" />
-                <h3 className="text-xl font-bold text-foreground">YouTube</h3>
-              </div>
-              <p className="text-muted-foreground">
-                <a
-                  href="https://www.youtube.com/@meinegeldseite"
-                  className="text-primary hover:underline font-semibold"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @meinegeldseite
-                </a>
+              <h3 className="text-2xl font-bold text-foreground mb-4">💡 Mein Profi-Tipp für dich</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Sei authentisch! Erzähle deiner Community, warum <strong>du</strong> hinter meinen Kursen stehst. Ein persönlicher Satz wie: „Ich kenne [Dein Name] und weiß, wie viel Herzblut in diesem Kurs steckt", verkauft sich 10x besser als reine Werbesprache.
               </p>
             </Card>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Partner Section - Dein Partner */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
-            Dein Partner
-          </h2>
+        {/* Contact Section */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="container">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
+              Du hast Fragen oder brauchst Hilfe?
+            </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
+            <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl">
+              Wenn du irgendwo hängst, einen Test-Zugang für ein Review brauchst oder eine Idee für eine gemeinsame Aktion hast, schreib mir einfach!
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="p-8 border border-border bg-card">
+                <div className="flex items-center gap-4 mb-4">
+                  <Mail className="h-6 w-6 text-primary" />
+                  <h3 className="text-xl font-bold text-foreground">E-Mail</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  <a
+                    href="mailto:tblees@meine-geldseite.de"
+                    className="text-primary hover:underline font-semibold"
+                  >
+                    tblees@meine-geldseite.de
+                  </a>
+                </p>
+              </Card>
+
+              <Card className="p-8 border border-border bg-card">
+                <div className="flex items-center gap-4 mb-4">
+                  <Youtube className="h-6 w-6 text-primary" />
+                  <h3 className="text-xl font-bold text-foreground">YouTube</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  <a
+                    href="https://www.youtube.com/@meinegeldseite"
+                    className="text-primary hover:underline font-semibold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @meinegeldseite
+                  </a>
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Partner Section - Dein Partner */}
+        <section className="py-20 md:py-28 bg-secondary/30">
+          <div className="container">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
+              Dein Partner
+            </h2>
+
             <div className="flex justify-center">
-              <div className="rounded-lg overflow-hidden shadow-lg">
+              <div className="rounded-lg overflow-hidden shadow-lg max-w-md">
                 <img
-                  src="/images/thomas-blees.png"
-                  alt="Thomas Blees - Coach und Lehrer"
+                  src="/images/lars-pillmann.jpg"
+                  alt="Lars Pillmann, Berlin"
                   className="w-full h-auto object-cover"
                 />
-              </div>
-            </div>
-
-            {/* Content */}
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Dein Coach und Lehrer: Thomas Blees
-              </h3>
-
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Aktuelle Position & Zertifikationen
-                  </h4>
-                  <ul className="space-y-2 text-sm">
-                    <li>• Abschluss KI-Pionier Akademie von Garrit Wilson ai consulting</li>
-                    <li>• 2024 AI Workplace Proficiency Certification der Superhuman AI Academy</li>
-                    <li>• 2021-heute Geschaeftsfuehrer FTB Investment GmbH</li>
-                    <li>• 2019 Intensivausbildung Portfoliomanagement bei Andre Stagge</li>
-                    <li>• 2013 Examen Certified Financial Technician Level I</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Branchenerfahrung
-                  </h4>
-                  <ul className="space-y-2 text-sm">
-                    <li>• Mitglied der Vereinigung Technischer Analysten Deutschlands e.V.</li>
-                    <li>• Seit 2007 an der Boerse aktiv - Erfahrung im Handel mit Aktien, ETFs, Optionen, Futures, Forex</li>
-                    <li>• 2001-2023 Pressesprecher KPMG AG</li>
-                    <li>• 2001 Abschluss Dipl.-Betriebswirt (ebw)</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Medienkarriere
-                  </h4>
-                  <ul className="space-y-2 text-sm">
-                    <li>• 1999-2000 Redakteur Made in Germany (Deutsche Welle TV)</li>
-                    <li>• 1998-1999 Redakteur Talk im Turm (SAT1)</li>
-                    <li>• 1992-1998 Freier Mitarbeiter beim SFB (Hoerfunk und TV)</li>
-                    <li>• 1990-1992 Volontariat beim Sender Freies Berlin</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-2">
-                    Ausbildung
-                  </h4>
-                  <p className="text-sm">
-                    • 1983-1990 Studium Publizistik, Politik und Soziologie an der FU Berlin (M.A.)
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-border">
-                  <p className="text-sm italic">
-                    Thomas Blees bringt ueber 30 Jahre Erfahrung in Finanzen, Medien und Bildung mit. Seine Leidenschaft ist es, komplexe Konzepte verstaendlich zu vermitteln und Menschen auf ihrem Weg zu finanzieller Unabhaengigkeit zu begleiten.
+                <div className="bg-card p-4 text-center">
+                  <p className="text-sm text-muted-foreground font-semibold">
+                    © Lars Pillmann, Berlin
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-primary text-white">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Lass uns gemeinsam durchstarten!
-          </h2>
-          <p className="text-lg mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed">
-            Werde jetzt Teil unseres Affiliate-Programms und verdiene mit deiner Community.
-          </p>
-          <Button
-            size="lg"
-            className="bg-white text-primary hover:bg-white/90 rounded-md font-semibold"
-          >
-            Jetzt registrieren <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-foreground text-white py-12 md:py-16">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <h4 className="text-lg font-bold mb-4">Masterclass</h4>
-              <p className="text-white/70 leading-relaxed">
-                Hochwertige Kurse zu Trading, Investieren und Finanzbildung.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Affiliate Program</h4>
-              <ul className="space-y-2 text-white/70">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Registrieren
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Kontakt
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-4">Rechtliches</h4>
-              <ul className="space-y-2 text-white/70">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Impressum
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Datenschutz
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    AGB
-                  </a>
-                </li>
-              </ul>
-            </div>
+        {/* CTA Section */}
+        <section className="py-20 md:py-28 bg-gradient-to-br from-primary/10 to-primary/5">
+          <div className="container text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Lass uns gemeinsam durchstarten!
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Werde jetzt Teil unseres Affiliate-Programms und verdiene mit deiner Community.
+            </p>
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              Jetzt Affiliate werden <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
-          <div className="border-t border-white/10 pt-8 text-center text-white/60">
-            <p>&copy; 2024 Masterclass Affiliate Program. Alle Rechte vorbehalten.</p>
-          </div>
-        </div>
-      </footer>
+        </section>
+      </main>
     </div>
   );
 }
