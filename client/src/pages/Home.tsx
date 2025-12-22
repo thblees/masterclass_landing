@@ -380,6 +380,89 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Partner Section - Dein Partner */}
+      <section className="py-20 md:py-28 bg-secondary/30">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground">
+            Dein Partner
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="flex justify-center">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/images/thomas-blees.png"
+                  alt="Thomas Blees - Coach und Lehrer"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Dein Coach und Lehrer: Thomas Blees
+              </h3>
+
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-2">
+                    Aktuelle Position & Zertifikationen
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Abschluss KI-Pionier Akademie von Garrit Wilson ai consulting</li>
+                    <li>• 2024 AI Workplace Proficiency Certification der Superhuman AI Academy</li>
+                    <li>• 2021-heute Geschaeftsfuehrer FTB Investment GmbH</li>
+                    <li>• 2019 Intensivausbildung Portfoliomanagement bei Andre Stagge</li>
+                    <li>• 2013 Examen Certified Financial Technician Level I</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-2">
+                    Branchenerfahrung
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Mitglied der Vereinigung Technischer Analysten Deutschlands e.V.</li>
+                    <li>• Seit 2007 an der Boerse aktiv - Erfahrung im Handel mit Aktien, ETFs, Optionen, Futures, Forex</li>
+                    <li>• 2001-2023 Pressesprecher KPMG AG</li>
+                    <li>• 2001 Abschluss Dipl.-Betriebswirt (ebw)</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-2">
+                    Medienkarriere
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• 1999-2000 Redakteur Made in Germany (Deutsche Welle TV)</li>
+                    <li>• 1998-1999 Redakteur Talk im Turm (SAT1)</li>
+                    <li>• 1992-1998 Freier Mitarbeiter beim SFB (Hoerfunk und TV)</li>
+                    <li>• 1990-1992 Volontariat beim Sender Freies Berlin</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-bold text-foreground mb-2">
+                    Ausbildung
+                  </h4>
+                  <p className="text-sm">
+                    • 1983-1990 Studium Publizistik, Politik und Soziologie an der FU Berlin (M.A.)
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-border">
+                  <p className="text-sm italic">
+                    Thomas Blees bringt ueber 30 Jahre Erfahrung in Finanzen, Medien und Bildung mit. Seine Leidenschaft ist es, komplexe Konzepte verstaendlich zu vermitteln und Menschen auf ihrem Weg zu finanzieller Unabhaengigkeit zu begleiten.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-primary text-white">
         <div className="container text-center">
