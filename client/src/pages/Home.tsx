@@ -155,9 +155,11 @@ export default function Home() {
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Hey! Ich freue mich riesig, dass du meine Kurse weiterempfehlen möchtest. Auf dieser Seite erkläre ich dir Schritt für Schritt, wie du als mein Partner (Affiliate) Geld verdienst, indem du anderen Menschen hilfst, ihre Ziele mit meinen Inhalten zu erreichen.
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Jetzt starten <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <a href="https://www.digistore24.com/signup" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  Jetzt starten <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
         </section>
