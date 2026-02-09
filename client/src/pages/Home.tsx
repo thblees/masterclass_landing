@@ -79,6 +79,13 @@ const courses = [
     provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-ichimoku.jpg",
   },
+  {
+    id: "666143",
+    name: "Masterclass Traden und Investieren mit KI",
+    description: "Nutze künstliche Intelligenz für intelligente Trading- und Investitionsentscheidungen",
+    provision: "50 % (ca. 37,00 € pro Verkauf)",
+    mockup: "/images/mockup-ki.jpg",
+  },
 ];
 
 const testimonials = [
@@ -488,7 +495,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <div className="rounded-lg overflow-hidden shadow-lg max-w-md">
                   <img
-                    src="/images/lars-pillmann.jpg"
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/93727259/oZjVsVywlDUlQgDx.png"
                     alt="Lars Pillmann, Berlin"
                     className="w-full h-auto object-cover"
                   />
