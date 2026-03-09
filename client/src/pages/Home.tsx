@@ -86,6 +86,13 @@ const courses = [
     provision: "50 % (ca. 37,00 € pro Verkauf)",
     mockup: "/images/mockup-ki.jpg",
   },
+  {
+    id: "670528",
+    name: "Masterclass Makroanalyse für Einsteiger",
+    description: "Verstehe die globale Wirtschaft und treffe bessere Investitionsentscheidungen",
+    provision: "50 % (ca. 181,00 € pro Verkauf)",
+    mockup: "https://d2xsxph8kpxj0f.cloudfront.net/93727259/3u6SreMUvsKGt82VdT8RZu/mockup-makroanalyse_48852756.png",
+  },
 ];
 
 const testimonials = [
