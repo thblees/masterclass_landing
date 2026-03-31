@@ -4,16 +4,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Mail, Youtube, Check } from "lucide-react";
 import { toast } from "sonner";
 
-/**
- * Masterclass Landing Page - Minimalist Professional Design
- * 
- * Design Philosophy:
- * - Swiss Modernism with clear hierarchy and generous whitespace
- * - Deep teal (#0d7377) accents for CTAs and highlights
- * - Playfair Display for elegant headers, Inter for body text
- * - Single-column layout for affiliate program clarity
- * - Subtle animations and smooth transitions
- */
+const base = import.meta.env.BASE_URL;
 
 const courses = [
   {
@@ -21,77 +12,77 @@ const courses = [
     name: "Masterclass Bitcoin, NFTs und Krypto Assets",
     description: "Lerne alles über Kryptowährungen, NFTs und digitale Assets",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-bitcoin.jpg",
+    mockup: `${base}images/mockup-bitcoin.jpg`,
   },
   {
     id: "656974",
     name: "Masterclass Aktien und ETFs",
     description: "Investieren in Aktien und ETFs verstehen und umsetzen",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-aktien-etfs.jpg",
+    mockup: `${base}images/mockup-aktien-etfs.jpg`,
   },
   {
     id: "656973",
     name: "Masterclass Swingtrading",
     description: "Professionelle Swingtrading-Strategien für Anfänger und Fortgeschrittene",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-swingtrading.jpg",
+    mockup: `${base}images/mockup-swingtrading.jpg`,
   },
   {
     id: "656947",
     name: "Masterclass Dein Tradingplan",
     description: "Entwickle deinen persönlichen Tradingplan und Strategie",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-tradingplan.jpg",
+    mockup: `${base}images/mockup-tradingplan.jpg`,
   },
   {
     id: "656945",
     name: "Masterclass Technische Analyse",
     description: "Meistere die technische Analyse für erfolgreiche Trades",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-technische-analyse.jpg",
+    mockup: `${base}images/mockup-technische-analyse.jpg`,
   },
   {
     id: "656942",
     name: "Masterclass Trading und Investieren",
     description: "Umfassendes Wissen über Trading und langfristige Investitionen",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-trading-investieren.jpg",
+    mockup: `${base}images/mockup-trading-investieren.jpg`,
   },
   {
     id: "655817",
     name: "Masterclass Optionen für Fortgeschrittene",
     description: "Fortgeschrittene Optionsstrategien und Techniken",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-optionen-fortgeschrittene.jpg",
+    mockup: `${base}images/mockup-optionen-fortgeschrittene.jpg`,
   },
   {
     id: "655552",
     name: "Masterclass Optionen für Einsteiger",
     description: "Grundlagen der Optionen für Anfänger verständlich erklärt",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-optionen-einsteiger.jpg",
+    mockup: `${base}images/mockup-optionen-einsteiger.jpg`,
   },
   {
     id: "650936",
     name: "Masterclass Ichimoku Cloud",
     description: "Lerne das Ichimoku-System für technische Analyse",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-ichimoku.jpg",
+    mockup: `${base}images/mockup-ichimoku.jpg`,
   },
   {
     id: "666143",
     name: "Masterclass Traden und Investieren mit KI",
     description: "Nutze künstliche Intelligenz für intelligente Trading- und Investitionsentscheidungen",
     provision: "50 % (ca. 37,00 € pro Verkauf)",
-    mockup: "/images/mockup-ki.jpg",
+    mockup: `${base}images/mockup-ki.jpg`,
   },
   {
     id: "670528",
     name: "Masterclass Makroanalyse für Einsteiger",
     description: "Verstehe die globale Wirtschaft und treffe bessere Investitionsentscheidungen",
     provision: "50 % (ca. 181,00 € pro Verkauf)",
-    mockup: "https://d2xsxph8kpxj0f.cloudfront.net/93727259/3u6SreMUvsKGt82VdT8RZu/mockup-makroanalyse_48852756.png",
+    mockup: `${base}images/mockup-ki.jpg`,
   },
 ];
 
@@ -502,7 +493,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <div className="rounded-lg overflow-hidden shadow-lg max-w-md">
                   <img
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/93727259/oZjVsVywlDUlQgDx.png"
+                    src={`${base}images/lars-pillmann.jpg`}
                     alt="Lars Pillmann, Berlin"
                     className="w-full h-auto object-cover"
                   />
