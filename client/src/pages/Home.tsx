@@ -84,6 +84,20 @@ const courses = [
     provision: "50 % (ca. 181,00 € pro Verkauf)",
     mockup: `${base}images/mockup-ki.jpg`,
   },
+  {
+    id: "689419",
+    name: "Masterclass Hedging (Portfolioabsicherung)",
+    description: "Dein komplettes System gegen den nächsten Crash – 10 Module, 4 fertige Hedging-Setups plus Crash-Simulator, Stop-Loss-Rechner und VIX-Dashboard",
+    provision: "50 % (ca. 153,00 € pro Verkauf)",
+    mockup: `${base}images/mockup-hedging.jpg`,
+  },
+  {
+    id: "709748",
+    name: "Masterclass Börsenpsychologie",
+    description: "Die Lücke zwischen Wissen und Tun schließen: Denkfehler erkennen, Angst und FOMO beherrschen, Disziplin und Routinen aufbauen – 8 Module mit 33 Video-Lektionen",
+    provision: "50 % (ca. 48,00 € pro Verkauf)",
+    mockup: `${base}images/mockup-boersenpsychologie.jpg`,
+  },
 ];
 
 const testimonials = [
